@@ -1,0 +1,29 @@
+package patterns;
+import java.util.Scanner;
+/*
+    1
+   22
+  333
+ 4444
+55555
+ */
+public class p5 {
+	public static void main(String args[]) {
+		System.out.println("Enter a number: ");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+				
+		int i,j;
+		for(i=1;i<=n;i++) {
+			for(j=1;j<=(n-i);j++) {
+				System.out.print(" ");
+			}
+			for(j=1;j<=i;j++) {
+				System.out.print(i);
+			}
+			
+			System.out.println();
+		}
+		sc.close();
+	}
+}

@@ -1,0 +1,19 @@
+package day1;
+import java.util.Scanner;
+public class Circles {
+	public static void main(String args[]) {
+		Scanner obj = new Scanner(System.in);
+		float radius, area =0, circum = 0;
+		radius = obj.nextFloat();
+		
+		area = (float) (Math.PI * Math.pow(radius,2));
+		//area = 3.14f * radius * radius;
+		
+		
+		circum = (float) (2 * Math.PI * radius);
+		
+		System.out.println(area);
+		System.out.println(circum);
+		obj.close();
+	}
+}

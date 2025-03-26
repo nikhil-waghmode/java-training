@@ -1,0 +1,23 @@
+package assignment3;
+import java.util.Scanner;
+
+/*Write a program that accepts a number and print the number in reverse order. For example, if the
+number is 7322 then the reverse number is 2237
+*/
+public class Ass12 {
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your number: ");
+		int num = sc.nextInt();
+		int counter =0;
+		int reminder=0;
+		while(num>0) {
+			counter++;
+			reminder=num%10;
+			System.out.println(reminder);
+
+		}
+		sc.close();
+		
+	}
+}

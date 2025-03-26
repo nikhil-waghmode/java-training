@@ -1,0 +1,23 @@
+package day1;
+import java.util.Scanner;
+
+public class Ass8 {
+	public static void main(String args[]) {
+		Scanner in = new Scanner(System.in);
+		
+		int p, r, t;
+		
+		double simpleInt = 0, compundInt = 0;
+		
+		p = in.nextInt();
+		r = in.nextInt();
+		t = in.nextInt();
+		
+		simpleInt = (p*r*t)/100;
+		
+		compundInt = p * Math.pow((1+r),t);
+		
+		System.out.println("Simple Interest: " + simpleInt + "\nCompund Interest: " + compundInt);
+		
+	}
+}

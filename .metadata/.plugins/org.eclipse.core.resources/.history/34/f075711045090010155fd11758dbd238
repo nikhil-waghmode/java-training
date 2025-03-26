@@ -1,0 +1,11 @@
+package assignment3;
+
+public class Ass2 {
+	public static void main(String a[]) {
+		for(int i =0; i<=100;i++) {
+			int sum =0;
+			sum = i + sum;
+			System.out.print(sum);
+		}
+	}
+}

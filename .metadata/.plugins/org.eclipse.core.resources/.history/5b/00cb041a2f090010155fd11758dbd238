@@ -1,0 +1,13 @@
+package day1;
+import java.util.Scanner;
+public class Ass12 {
+	Scanner sc = new Scanner(System.in);
+	double usd, euro =0;
+	
+	usd = sc.nextDouble();
+	
+	euro = usd*0.85;
+	
+	System.out.println("Euro equivalent is " + euro);
+	
+}
