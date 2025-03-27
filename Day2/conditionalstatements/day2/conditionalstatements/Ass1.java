@@ -1,4 +1,4 @@
-package day2;
+package day2.conditionalstatements;
 
 import java.util.Scanner;
 
@@ -13,5 +13,6 @@ public class Ass1 {
 		else {
 			System.out.println("Odd number.");
 		}
+		sc.close();
 	}
 }

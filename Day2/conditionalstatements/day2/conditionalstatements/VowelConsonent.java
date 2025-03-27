@@ -1,4 +1,4 @@
-package day2;
+package day2.conditionalstatements;
 import java.util.Scanner;
 public class VowelConsonent {
 	public static void main(String a[]) {
@@ -8,7 +8,7 @@ public class VowelConsonent {
 		case 'A':  //break isn't present so it skips to next case.
 		case 'a': System.out.println("Vowel.");
 					break;
-		
 		}
+		sc.close();
 	}
 }

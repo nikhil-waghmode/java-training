@@ -1,4 +1,4 @@
-package day2;
+package day2.conditionalstatements;
 import java.util.Scanner;
 public class Ass4 {
 	public static void main(String a[]) {

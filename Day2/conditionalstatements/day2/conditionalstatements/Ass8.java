@@ -1,4 +1,4 @@
-package day2;
+package day2.conditionalstatements;
 import java.util.Scanner;
 
 //Check if char is upper lower number or special char
@@ -21,5 +21,6 @@ public class Ass8 {
 		}
 		else
 			System.out.println("Special");
+		in.close();
 	}
 }
