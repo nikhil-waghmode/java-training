@@ -43,46 +43,31 @@ public class ProductList {
 //		products.forEach(System.out::println);
 	}
 	
-	//Doubt
-//	public void updateProduct() {
-//		Product pd = new Product();
-//		Scanner sc =new Scanner(System.in);
-//		
-////		pd.acceptData();
-//		for(int i=0;i<products.size();i++) {
-//			Product p1 = products.get(i);
-//			if(p1.code == pd.code) {
-//				System.out.println("Enter name:");
-//				p1.setName(sc.nextLine());
-//				System.out.println("Enter category:");
-//				p1.setCategory(sc.nextLine());
-//				System.out.println("Enter price:");
-//				p1.setPrice(sc.nextDouble());
-//				sc.nextLine();
-//				System.out.println("Enter quantity:");
-//				p1.setQuantity(sc.nextInt());
-//				sc.nextLine();
-//				return;
-//			}
-//		}
-//		System.out.println("No such product code.");
-//	}
 	public void updateProduct() {
 		Product pd = new Product();
-		pd.acceptData();
-		for(int i =0;i<products.size();i++) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter code:");
+		int code = sc.nextInt();
+		sc.nextLine();
+		for(int i=0;i<products.size();i++) {
 			Product p1 = products.get(i);
-			if(p1.code == pd.code) {
-				p1.setName(pd.getName());
-				p1.setCategory(pd.getCategory());
-				p1.setPrice(pd.getPrice());
-				p1.setQuantity(pd.getQuantity());
-				System.out.println("Product Updated");
+			if(p1.code == code) {
+				System.out.println("Enter name:");
+				p1.setName(sc.nextLine());
+				System.out.println("Enter category:");
+				p1.setCategory(sc.nextLine());
+				System.out.println("Enter price:");
+				p1.setPrice(sc.nextDouble());
+				sc.nextLine();
+				System.out.println("Enter quantity:");
+				p1.setQuantity(sc.nextInt());
+				sc.nextLine();
 				return;
 			}
 		}
 		System.out.println("No such product code.");
 	}
+
 	
 	public void deleteProduct() {
 		Product pd = new Product();
