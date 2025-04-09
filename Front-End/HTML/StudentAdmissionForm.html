@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Student Admission Form</title>
+</head>
+
+<body>
+    <strong>📝 New Student Admission Form</strong><br /><br />
+    <form action="">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Full Name: </label>
+            <input type="text" name="name" /><br /><br />
+            <label for="email">Email ID: </label>
+            <input type="email" name="email" /><br /><br />
+            <label for="password">Password: </label>
+            <input type="password" name="password" /><br /><br />
+
+            <legend>Gender:</legend> <!--Radio-->
+            <input type="radio" id="male" name="gender" checked />
+            <label for="male">Male</label><br />
+            <input type="radio" id="female" name="gender" />
+            <label for="female">Female</label> <br />
+            <input type="radio" id="other" name="gender" />
+            <label for="other">Other</label><br />
+
+            <legend>Hobbies:</legend> <!--Checkbox-->
+            <input type="checkbox" id="reading" name="hobbies" />
+            <label for="reading">Reading</label><br />
+            <input type="checkbox" id="sports" name="hobbies" />
+            <label for="sports">Sports</label> <br />
+            <input type="checkbox" id="coding" name="hobbies" />
+            <label for="coding">Coding</label><br />
+            <input type="checkbox" id="music" name="hobbies" />
+            <label for="music">Music</label><br />
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>Course & Contact Details</legend>
+            <label for="course">Select Course: </label>
+            <select id="course" name="course"> <!--Drop Down Menu-->
+                <option>Web Development</option>
+                <option>Data Science</option>
+                <option>AI/ML</option>
+                <option>Cyber Security</option>
+                <option>Cloud Computing</option>
+            </select><br /><br />
+
+            <label for="phone">Phone Number: </label>
+            <input type="tel" name="phone" placeholder="10 digit number" /><br /><br />
+
+            <label for="address">Address: </label><br />
+            <textarea rows="3" cols="40" name="address"> </textarea>
+        </fieldset>
+        <br />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <hr />
+        <p>&copy;2025 Student Admission Portal</p>
+    </form>
+</body>
+
+</html>

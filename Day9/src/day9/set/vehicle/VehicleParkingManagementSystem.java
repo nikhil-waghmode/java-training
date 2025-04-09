@@ -44,66 +44,68 @@ Number of vehicles with odd-ending license plates: [COUNT]
  The program should terminate when the user selects this option.
  Expected output:
 Exiting the Vehicle Parking Management System. Goodbye! */
-import java.util.*;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Scanner;
 
 public class VehicleParkingManagementSystem {
 	public static void main(String[] args) {
-		Scanner sc= new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		Collection<String> plateNos = new HashSet<>();
 		String plateNo = new String();
-		while(true) {
-			System.out.println("1. Park a Vehicle (Add License Plate)\n" +
-					"2. Check if a Vehicle is Parked\n" + 
-					"3. Remove a Vehicle (Unpark)\n"+
-					"4. Display All Parked Vehicles\n"+
-					"5. Count Vehicles with Odd-Ending License Plates\n"+
-					"6. Exit the Program");
+		while (true) {
+			System.out.println("1. Park a Vehicle (Add License Plate)\n" + "2. Check if a Vehicle is Parked\n"
+					+ "3. Remove a Vehicle (Unpark)\n" + "4. Display All Parked Vehicles\n"
+					+ "5. Count Vehicles with Odd-Ending License Plates\n" + "6. Exit the Program");
 			int choice = sc.nextInt();
 			sc.nextLine();
-			switch(choice) {
+			switch (choice) {
 			case 1:
 				System.out.println("Add License Plate: ");
 				plateNo = sc.nextLine();
-				if(plateNos.add(plateNo.toUpperCase())) {
-					System.out.println("Vehicle with license plate ["+ plateNo+"] parked successfully.");
+				if (plateNos.add(plateNo.toUpperCase())) {
+					System.out.println("Vehicle with license plate [" + plateNo + "] parked successfully.");
 					break;
 				}
-				System.out.println("Vehicle with license plate ["+ plateNo+"] is already parked.");
+				System.out.println("Vehicle with license plate [" + plateNo + "] is already parked.");
 				break;
 			case 2:
 				System.out.println("Enter License Plate to check if parked: ");
 				plateNo = sc.nextLine();
-				if(plateNos.contains(plateNo.toUpperCase())) {
-					System.out.println("The vehicle with license plate ["+ plateNo+"] is parked in the lot.");
+				if (plateNos.contains(plateNo.toUpperCase())) {
+					System.out.println("The vehicle with license plate [" + plateNo + "] is parked in the lot.");
 					break;
 				}
-				System.out.println("The vehicle with license plate ["+ plateNo+"] is not in the lot.");
+				System.out.println("The vehicle with license plate [" + plateNo + "] is not in the lot.");
 				break;
 			case 3:
 				System.out.println("Enter License Plate to remove a vehicle: ");
 				plateNo = sc.nextLine();
-				if(plateNos.contains(plateNo.toUpperCase())) {
+				if (plateNos.contains(plateNo.toUpperCase())) {
 					plateNos.remove(plateNo.toUpperCase());
-					System.out.println("The vehicle with license plate ["+ plateNo+"] has left the parking lot.");
+					System.out.println("The vehicle with license plate [" + plateNo + "] has left the parking lot.");
 					break;
 				}
-				System.out.println("The vehicle with license plate ["+ plateNo+"] was not found in the parking lot.");
+				System.out
+						.println("The vehicle with license plate [" + plateNo + "] was not found in the parking lot.");
 				break;
 			case 4:
-				if(plateNos.isEmpty()) {
+				if (plateNos.isEmpty()) {
 					System.out.println("No vehicles are parked in the lot.");
 					break;
 				}
-				plateNos.forEach((E)->System.out.println("License Plate: ["+E+"]"));
+				plateNos.forEach((E) -> System.out.println("License Plate: [" + E + "]"));
 				break;
 			case 5:
-				int count =0;
-				for(String str: plateNos) {
-					if(str.endsWith("1") ||str.endsWith("3") ||str.endsWith("5") ||str.endsWith("7") ||str.endsWith("9")) {
+				int count = 0;
+				for (String str : plateNos) {
+					if (str.endsWith("1") || str.endsWith("3") || str.endsWith("5") || str.endsWith("7")
+							|| str.endsWith("9")) {
 						count++;
 					}
 				}
-				System.out.println("Number of vehicles with odd-ending license plates: ["+count+"] ");
+
+				System.out.println("Number of vehicles with odd-ending license plates: [" + count + "] ");
 				break;
 			case 6:
 				System.out.println("Exiting the Vehicle Parking Management System. Goodbye!");
@@ -112,6 +114,6 @@ public class VehicleParkingManagementSystem {
 			default:
 				System.out.println("Invalid Choice");
 			}
-			}
+		}
 	}
 }

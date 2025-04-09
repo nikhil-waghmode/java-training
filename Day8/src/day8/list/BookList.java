@@ -1,6 +1,9 @@
 package day8.list;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
 
 /*
  * Write a menu-driven Java program to perform CRUD operations (Create, Read, Update, Delete) on a List of Books.
@@ -27,23 +30,70 @@ Additional Notes:
  Continuously prompt the user until they select the exit option. */
 public class BookList {
 	List<Book> books;
-	BookList(){
-		books= new ArrayList<>();
+	Scanner sc = new Scanner(System.in);
+
+	BookList() {
+		books = new ArrayList<>();
 	}
+
 	public void addBook() {
 		Book b = new Book();
 		b.acceptData();
 		books.add(b);
 	}
+
 	public void displayBooks() {
 		System.out.println(books);
 	}
+
 	public void updateBook() {
-		Book b = new Book();
-		for(int i =0;i<books.size();i++) {
+		System.out.println("Enter isbn to update price: ");
+		String isbn = sc.nextLine();
+		System.out.println("Enter updated price: ");
+		Double price = sc.nextDouble();
+		sc.nextLine();
+		boolean updated = false;
+		for (int i = 0; i < books.size(); i++) {
 			Book b1 = books.get(i);
-			if(b1.getIsbn().equalsIgnoreCase())
+			if (b1.getIsbn().equalsIgnoreCase(isbn)) {
+				b1.setPrice(price);
+				updated = true;
+				break;
+			}
+		}
+		if (!updated) {
+			System.out.println("No book found with the given ISBN.");
+		} else {
+			System.out.println("Book price updated successfully.");
 		}
 	}
-	
+
+	public void deleteBook() {
+		System.out.println("Enter isbn to delete: ");
+		String isbn = sc.nextLine();
+		boolean deleted = false;
+		for (int i = 0; i < books.size(); i++) {
+			Book b1 = books.get(i);
+			if (b1.getIsbn().equalsIgnoreCase(isbn)) {
+				books.remove(i);
+				deleted = true;
+				break;
+			}
+		}
+		if (!deleted) {
+			System.out.println("No book found with the given ISBN.");
+		} else {
+			System.out.println("Book deleted successfully.");
+		}
+	}
+
+	public void sortByTitle() {
+		books.sort(Comparator.comparing(Book::getTitle));
+	}
+
+	public void reverseSortByPrice() {
+		books.sort(Comparator.comparingDouble(Book::getPrice).reversed());
+		books.forEach(book -> System.out.print(book + " "));
+	}
+
 }

@@ -1,4 +1,5 @@
 package day8.list;
+
 /*
  * Write a menu-driven Java program to perform CRUD operations (Create, Read, Update, Delete) on a List of Books.
 The Book class should contain the following fields:
@@ -23,5 +24,7 @@ Additional Notes:
  Include a calculation operation to calculate the total price of all books in stock.
  Continuously prompt the user until they select the exit option. */
 public class Q6 {
-	
+	public static void main(String[] args) {
+		ArrayList<Stri
+	}
 }

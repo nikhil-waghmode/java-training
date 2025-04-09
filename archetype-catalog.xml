@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-catalog xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0">
+  <archetypes>
+    <archetype>
+      <groupId>org.apache.maven.archetypes</groupId>
+      <artifactId>maven-archetype-quickstart</artifactId>
+      <version>1.5</version>
+      <description>Quickstart project archetype for Java</description>
+    </archetype>
+  </archetypes>
+</archetype-catalog>

@@ -32,11 +32,11 @@ public class Book {
 	protected String author;
 	protected double price;
 	protected int quantity;
-	
-	
+
 	public Book() {
 		super();
 	}
+
 	public Book(String isbn, String title, String author, double price, int quantity) {
 		super();
 		this.isbn = isbn;
@@ -45,72 +45,107 @@ public class Book {
 		this.price = price;
 		this.quantity = quantity;
 	}
+
 	public String getIsbn() {
 		return isbn;
 	}
+
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
+
 	public String getTitle() {
 		return title;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public String getAuthor() {
 		return author;
 	}
+
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+
 	public double getPrice() {
 		return price;
 	}
+
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
 	public int getQuantity() {
 		return quantity;
 	}
+
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	@Override
-	public int hashCode() {
-		return Objects.hash(author, isbn, price, quantity, title);
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Book other = (Book) obj;
-		return Objects.equals(author, other.author) && Objects.equals(isbn, other.isbn)
-				&& Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price) && quantity == other.quantity
-				&& Objects.equals(title, other.title);
-	}
-	@Override
-	public String toString() {
-		return "Book [isbn=" + isbn + ", title=" + title + ", author=" + author + ", price=" + price + ", quantity="
-				+ quantity + "]";
-	}
+//	@Override
+//	public int hashCode() {
+//		return Objects.hash(author, isbn, price, quantity, title);
+//	}
+//	@Override
+//	public boolean equals(Object obj) {
+//		if (this == obj)
+//			return true;
+//		if (obj == null)
+//			return false;
+//		if (getClass() != obj.getClass())
+//			return false;
+//		Book other = (Book) obj;
+//		return Objects.equals(author, other.author) && Objects.equals(isbn, other.isbn)
+//				&& Double.doubleToLongBits(price) == Double.doubleToLongBits(other.price) && quantity == other.quantity
+//				&& Objects.equals(title, other.title);
+//	}
+
+//	@Override
+//	public String toString() {
+//		return "Book [isbn=" + isbn + ", title=" + title + ", author=" + author + ", price=" + price + ", quantity="
+//				+ quantity + "]";
+//	}
 	public void acceptData() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter ISBN:");
 		isbn = sc.nextLine();
 		System.out.println("Enter Title:");
-		title= sc.nextLine();
+		title = sc.nextLine();
 		System.out.println("Enter Author:");
-		author= sc.nextLine();
+		author = sc.nextLine();
 		System.out.println("Enter price:");
-		price= sc.nextDouble();
+		price = sc.nextDouble();
 		sc.nextLine();
 		System.out.println("Enter quantity:");
-		quantity=sc.nextInt();
+		quantity = sc.nextInt();
 		sc.nextLine();
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Book [isbn=" + isbn + ",  title=" + title + ", author=" + author + ", price=" + price + ", quantity="
+				+ quantity + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(isbn, title, author, price, quantity);
+	}
+
+	@Override
+	public boolean equals(Object ob) {
+		if (this == ob) {
+			return true;
+		}
+
+		if (ob == null || !(ob instanceof Book)) {
+			return false;
+		}
+		Book book = (Book) ob;
+		return isbn.equals(book.isbn) && title.equals(book.title) && author.equals(book.author) && price == (book.price)
+				&& quantity == book.quantity;
+	}
 }
