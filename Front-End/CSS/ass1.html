@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Assignment1</title>
+    <style>
+        p {
+            background-color: rgb(147, 182, 247);
+        }
+        #main-heading {
+            font-size: larger;
+            border: 2px;
+        }
+        .highlight {
+            color: aqua;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        input[type="text"] {
+            border: 2px;
+        }
+
+        a[href^="#"] {
+            color: green;
+        }
+
+        a[href$=".pdf"] {
+            font-weight: bold;
+        }
+
+        input[type="checkbox"] {
+            size: 10pt;
+            border: 10px;
+            font-stretch: extra-expanded;
+            zoom:3;
+        }
+
+        img[alt] {
+            background-color: pink;
+        }
+
+        a:hover {
+            color: rgb(184, 8, 8);
+        }
+
+        input:focus {
+            border: 20px;
+            border-color: solid green;
+            zoom:3;
+        }
+
+        li:first-of-type {
+            background-color: red;
+        }
+        tr:nth-child(even){
+            font-style: italic;
+        } 
+        div:hover{
+            background-color: black;
+        }
+        h2::before{
+            content: "⭐️";
+        }
+        h2::after{
+            content: "→";
+        }
+        p::first-letter{
+            text-transform: capitalize;
+        }
+        p::first-line {
+            font-style: italic;
+        }
+        .card > p {
+            font-size: xx-large;
+        }
+        h3 + p{
+            color: brown;
+        }
+        .intro ~ p {
+            background-color:lightcoral;
+        }
+        .fav-list {
+            font-stretch:ultra-expanded ;
+            color: blue;
+        }
+        div span{
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Part A: Basic Selectors -->
+    <p>This is a paragraph.</p>
+    <p class="highlight">This paragraph has the highlight class.</p>
+    <div id="main-heading">Main Heading</div>
+
+    <!-- Part B: Attribute Selectors -->
+    <input type="text" placeholder="Type something here">
+    <input type="password" placeholder="Password">
+    <a href="#home">Home</a>
+    <a href="about.pdf">About PDF</a>
+    <a href="contact.pdf">Contact PDF</a>
+    <label for="accept"> checkbox</label>
+    <input type="checkbox" name="accept" id="accept">
+    <img src="image.jpg" alt="A beautiful landscape">
+    <img src="image2.jpg">
+
+    <!-- Part C: Pseudo-classes -->
+    <a href="#">Link</a>
+    <input type="text" placeholder="Focus me!">
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <table>
+        <tr>
+            <td>Row 1</td>
+        </tr>
+        <tr>
+            <td>Row 2</td>
+        </tr>
+        <tr>
+            <td>Row 3</td>
+        </tr>
+        <tr>
+            <td>Row 4</td>
+        </tr>
+    </table>
+    <div class="hover-div">Hover over me!</div>
+
+    <!-- Part D: Pseudo-elements -->
+    <h2>Heading 2</h2>
+    <button>Click me</button>
+
+    <!-- Part E: CSS Combinators -->
+    <div class="card">
+        <p>This paragraph is inside a .card</p>
+    </div>
+    <h3>Heading 3</h3>
+    <p>This paragraph comes after an h3.</p>
+    <div class="intro">
+        <p>This paragraph comes after the .intro div.</p>
+    </div>
+    <ul class="fav-list">
+        <li>Favorite item 1</li>
+        <li>Favorite item 2</li>
+        <li>Favorite item 3</li>
+    </ul>
+    <div>
+        <span>This is a span inside a div.</span>
+    </div>
+</body>
+
+</html>

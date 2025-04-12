@@ -40,15 +40,18 @@
         ctx.fillText("Hello Canvas!", 100, 30);
         
         // Animation - Moving Ball
-        let x = 50, y = 250;
+        let x = 0, y = 400;
         function animate() {
-            ctx.clearRect(0, 200, canvas.width, canvas.height); // Clear bottom part
+            ctx.clearRect(0,0,canvas.width, canvas.height); // Clear bottom part
             ctx.beginPath();
-            ctx.arc(x, y, 20, 0, 2 * Math.PI);
+            ctx.arc(x, y, 12, 0, 2 * Math.PI);
             ctx.fillStyle = "orange";
             ctx.fill();
-            x += 2;
+            x += 8;
+            y-=0.1;
+            // if(x>canva.width/2 ) ctx.fillStyle = "blue";
             if (x > canvas.width) x = 0;
+            // if (y > canvas.height) y = 0;
             requestAnimationFrame(animate);
         }
         animate();

@@ -1,0 +1,351 @@
+{
+    "users": [
+        {
+            "UserID": 1,
+            "Name": "Arnold Smith",
+            "Email": "arnold.smith@gmail.com",
+            "Password": "Arnold@345",
+            "Phone": "7049384920",
+            "UserType": "Restaurant Owner"
+        },
+        {
+            "UserID": 2,
+            "Name": "Jay Patel",
+            "Email": "pateljaykant@gmail.com",
+            "Password": "jaykantPatel95@",
+            "Phone": "7658764830",
+            "UserType": "Customer"
+        },
+        {
+            "UserID": 3,
+            "Name": "Rohan Sharma",
+            "Email": "rohansmith123@gmail.com",
+            "Password": "smith@34A23",
+            "Phone": "8989340249",
+            "UserType": "Customer"
+        },
+        {
+            "UserID": 4,
+            "Name": "Shubham Pal",
+            "Email": "arnold.smith@gmail.com",
+            "Password": "palShubham00",
+            "Phone": "9023484848",
+            "UserType": "Customer"
+        },
+        {
+            "UserID": 5,
+            "Name": "Jignesh Tripathi",
+            "Email": "jigneshtt89@gmail.com",
+            "Password": "Jigneshtri@345",
+            "Phone": "8903478574",
+            "UserType": "Customer"
+        },
+        {
+            "UserID": 6,
+            "Name": "Sunita Patil",
+            "Email": "patil.sunita34@gmail.com",
+            "Password": "Sunita@patil5",
+            "Phone": "9143277842",
+            "UserType": "Customer"
+        },
+        {
+            "UserID": 7,
+            "Name": "Raj Varma",
+            "Email": "varmarajsuresh21@gmail.com",
+            "Password": "Varma@Raj89",
+            "Phone": "8953657467",
+            "UserType": "Restaurant Owner"
+        },
+        {
+            "UserID": 8,
+            "Name": "Jay Shah",
+            "Email": "jay.shah@gmail.com",
+            "Password": "Shah@34#$",
+            "Phone": "7739043294",
+            "UserType": "Customer"
+        },
+        {
+            "UserID": 9,
+            "Name": "Arti Sharma",
+            "Email": "sharmaa21@gmail.com",
+            "Password": "Sharma@Arti123",
+            "Phone": "8934024820",
+            "UserType": "Restaurant Owner"
+        },
+        {
+            "UserID": 10,
+            "Name": "Faizal Shaikh",
+            "Email": "faizushaikh213@gmail.com",
+            "Password": "ShaikhFaizu3005",
+            "Phone": "7658559898",
+            "UserType": "Customer"
+        },
+        {
+            "UserID": 11,
+            "Name": "Ritesh Rathod",
+            "Email": "rritesh2003@gmail.com",
+            "Password": "R@th0dRit",
+            "Phone": "7985773901",
+            "UserType": "Restaurant Owner"
+        }
+    ],
+    "Restaurants": [
+        {
+            "RestaurantID": 1,
+            "Name": "Raju Chole Bhature",
+            "Location": "Spine City",
+            "Contact": "",
+            "OwnerID": ""
+        },
+        {
+            "RestaurantID": 2,
+            "Name": "Burger Barn",
+            "Location": "Suresh Nagar",
+            "Contact": ""
+        },
+        {
+            "RestaurantID": 3,
+            "Name": "Chicken Express",
+            "Location": "Sector 21",
+            "Contact": ""
+        },
+        {
+            "RestaurantID": 4,
+            "Name": "Pasta House",
+            "Location": "Mall Road",
+            "Contact": ""
+        },
+        {
+            "RestaurantID": 5,
+            "Name": "Paradise Biryani",
+            "Location": "Captial Chowk",
+            "Contact": ""
+        },
+        {
+            "RestaurantID": 6,
+            "Name": "Rameshwaram Cafe",
+            "Location": "Church Street",
+            "Contact": ""
+        },
+        {
+            "RestaurantID": 7,
+            "Name": "Dominos",
+            "Location": "MG nagar",
+            "Contact": ""
+        },
+        {
+            "RestaurantID": 8,
+            "Name": "Farmer's Kitchen",
+            "Location": "Rajgurunagar",
+            "Contact": ""
+        },
+        {
+            "RestaurantID": 9,
+            "Name": "Golden Cafe",
+            "Location": "Area 23",
+            "Contact": ""
+        },
+        {
+            "RestaurantID": 10,
+            "Name": "Geeta Pav Bhaji",
+            "Location": "Nigdi",
+            "Contact": ""
+        }
+    ],
+    "FoodItems": [
+        {
+            "ItemID": 1,
+            "Name": "Chole Bhature",
+            "Price": 90,
+            "RestaurantID": 1
+        },
+        {
+            "ItemID": 2,
+            "Name": "Veg Burger",
+            "Price": 110,
+            "RestaurantID": 2
+        },
+        {
+            "ItemID": 3,
+            "Name": "Chicken Wings (6 pcs)",
+            "Price": 200,
+            "RestaurantID": 3
+        },
+        {
+            "ItemID": 4,
+            "Name": "Creamy White Sauce Pasta",
+            "Price": 180,
+            "RestaurantID": 4
+        },
+        {
+            "ItemID": 5,
+            "Name": "Mutton Biryani (Full)",
+            "Price": 260,
+            "RestaurantID": 5
+        },
+        {
+            "ItemID": 6,
+            "Name": "Butter Masala Dosa",
+            "Price": 85,
+            "RestaurantID": 6
+        },
+        {
+            "ItemID": 7,
+            "Name": "Farmhouse Pizza (Medium)",
+            "Price": 270,
+            "RestaurantID": 7
+        },
+        {
+            "ItemID": 8,
+            "Name": "Fresh Organic Salad",
+            "Price": 120,
+            "RestaurantID": 8
+        },
+        {
+            "ItemID": 9,
+            "Name": "Cold Coffee with Ice Cream",
+            "Price": 90,
+            "RestaurantID": 9
+        },
+        {
+            "ItemID": 10,
+            "Name": "Spicy Pav Bhaji",
+            "Price": 100,
+            "RestaurantID": 10
+        }
+    ],
+    "Orders": [
+        {
+            "OrderID": 1,
+            "UserID": 2,
+            "RestaurantID": 1,
+            "OrderDate": "2025-04-01",
+            "TotalAmount": 180
+        },
+        {
+            "OrderID": 2,
+            "UserID": 5,
+            "RestaurantID": 5,
+            "OrderDate": "2025-04-02",
+            "TotalAmount": 520
+        },
+        {
+            "OrderID": 3,
+            "UserID": 7,
+            "RestaurantID": 7,
+            "OrderDate": "2025-04-03",
+            "TotalAmount": 270
+        },
+        {
+            "OrderID": 4,
+            "UserID": 1,
+            "RestaurantID": 4,
+            "OrderDate": "2025-04-04",
+            "TotalAmount": 180
+        },
+        {
+            "OrderID": 5,
+            "UserID": 6,
+            "RestaurantID": 6,
+            "OrderDate": "2025-04-05",
+            "TotalAmount": 170
+        },
+        {
+            "OrderID": 6,
+            "UserID": 9,
+            "RestaurantID": 3,
+            "OrderDate": "2025-04-06",
+            "TotalAmount": 400
+        },
+        {
+            "OrderID": 7,
+            "UserID": 3,
+            "RestaurantID": 8,
+            "OrderDate": "2025-04-07",
+            "TotalAmount": 240
+        },
+        {
+            "OrderID": 8,
+            "UserID": 8,
+            "RestaurantID": 9,
+            "OrderDate": "2025-04-08",
+            "TotalAmount": 180
+        },
+        {
+            "OrderID": 9,
+            "UserID": 10,
+            "RestaurantID": 2,
+            "OrderDate": "2025-04-09",
+            "TotalAmount": 220
+        },
+        {
+            "OrderID": 10,
+            "UserID": 4,
+            "RestaurantID": 10,
+            "OrderDate": "2025-04-10",
+            "TotalAmount": 200
+        }
+    ],
+    "OrderItems": [
+        {
+            "OrderItemID": 1,
+            "OrderID": 1,
+            "ItemID": 1,
+            "Quantity": 2
+        },
+        {
+            "OrderItemID": 2,
+            "OrderID": 2,
+            "ItemID": 5,
+            "Quantity": 2
+        },
+        {
+            "OrderItemID": 3,
+            "OrderID": 3,
+            "ItemID": 7,
+            "Quantity": 1
+        },
+        {
+            "OrderItemID": 4,
+            "OrderID": 4,
+            "ItemID": 4,
+            "Quantity": 1
+        },
+        {
+            "OrderItemID": 5,
+            "OrderID": 5,
+            "ItemID": 6,
+            "Quantity": 2
+        },
+        {
+            "OrderItemID": 6,
+            "OrderID": 6,
+            "ItemID": 3,
+            "Quantity": 2
+        },
+        {
+            "OrderItemID": 7,
+            "OrderID": 7,
+            "ItemID": 8,
+            "Quantity": 2
+        },
+        {
+            "OrderItemID": 8,
+            "OrderID": 8,
+            "ItemID": 9,
+            "Quantity": 2
+        },
+        {
+            "OrderItemID": 9,
+            "OrderID": 9,
+            "ItemID": 2,
+            "Quantity": 2
+        },
+        {
+            "OrderItemID": 10,
+            "OrderID": 10,
+            "ItemID": 10,
+            "Quantity": 2
+        }
+    ]
+}
